@@ -14,3 +14,28 @@ You are to solve the following graph problems. Each problem is 5 points.
 10. [Course Schedule II using Kahn](Problem10.md) **(5 points)**.
 
 **Write and defend** a report describing your solutions for each problem in [REPORT.md](REPORT.md) **(50 points)**.
+
+## Completed solutions
+
+The ten standalone solution classes are in [src/](src/). They preserve the
+assignment's public signatures and are compatible with **Java 8**. The
+[report](REPORT.md) explains each implementation, correctness, complexity,
+examples, and questions for the defense.
+
+## Run the checks
+
+Install **JDK 17 or newer**, then run from this repository:
+
+```sh
+sh test.sh
+```
+
+The [test script](test.sh) compiles against Java 8 with source compiler warnings
+treated as errors, then runs the [test harness](tests/Assignment3Test.java) with
+assertions enabled. The suite includes deterministic examples, fixed-seed random
+cases checked against independent oracles, large graphs, repeated calls, and
+input-preservation checks. Compilation output stays in a temporary directory.
+
+Assignment clarification: [Problem06.md](Problem06.md) contains a link typo that
+points to `Problem05.java`. The Tarjan solution is correctly implemented in
+[src/Problem06.java](src/Problem06.java).
